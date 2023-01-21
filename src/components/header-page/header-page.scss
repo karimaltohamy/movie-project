@@ -1,0 +1,19 @@
+@use "../../scss/" as *;
+
+.header_page {
+    height: 200px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 2rem;
+    @include flex(center, center);
+
+    &:before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 100px;
+        width: 100%;
+        background-image: linear-gradient(rgb(0 0 0 / 0%), #0f0f0fe0);
+    }
+}

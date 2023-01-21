@@ -1,0 +1,26 @@
+@use "../../scss/" as *;
+
+.movie_search {
+    @include flex(center, unset);
+    input {
+        margin-right: 10px;
+    }
+    .btn {
+        padding: 0.1rem 1rem;
+    }
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+
+    @include mobile {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+.container_btn {
+    text-align: center;
+    margin: 2rem 0;
+}

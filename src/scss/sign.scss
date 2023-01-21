@@ -1,0 +1,56 @@
+@use "./index" as *;
+
+.form-container {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include flex(center, center);
+
+    form {
+        padding: 2rem;
+        background-color: rgba(0,0,0,.75);
+        border-radius: 10px;
+        max-width: 450px;
+        width: 100%;
+        margin: 0 1.5rem;
+
+        .title-form {
+            margin-bottom: 2rem;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .alert {
+            padding: 8px 15px;
+            font-size: 15px;
+        }
+
+        .form-outline {
+            margin-bottom: 1rem;
+
+            .form-label {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            .form-control {
+                background-color: #333;
+                border-radius: 5px;
+                width: 100%;
+                border: none;
+                color: $txt-color;
+            }
+        }
+
+        .forgot {
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .btn-form {
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+    }
+}

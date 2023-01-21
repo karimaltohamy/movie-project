@@ -1,0 +1,50 @@
+@use "../../scss/" as *;
+
+.card_list {
+    .card_content {
+        height: 300px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 12px;
+        margin-bottom: 1rem;
+        position: relative;
+
+        @include mobile {
+            height: 240px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: $black;
+            opacity: 0;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-card {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            box-shadow: unset;
+            transition: all 0.3s ease;
+            padding: 0.1rem 1rem !important;
+        }
+
+        &:hover::before {
+            opacity: 0.8;
+        }
+
+        &:hover {
+            .btn-card {
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+    }
+}

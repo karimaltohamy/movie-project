@@ -1,0 +1,10 @@
+@use "../../scss/" as *;
+
+input {
+    padding: 0.5rem 3rem 0.5rem 0.7rem;
+    border: 0;
+    outline: none;
+    background-color: $black;
+    border-radius: $border-radius;
+    color: $txt-color;
+}
